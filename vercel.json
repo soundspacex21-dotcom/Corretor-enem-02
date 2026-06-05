@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/corrigir.js", "use": "@vercel/node" },
+    { "src": "public/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/corrigir", "dest": "/api/corrigir.js" },
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ]
+}
